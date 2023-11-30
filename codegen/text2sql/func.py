@@ -384,8 +384,8 @@ def k_nn_ingestion_by_aos(docs,index,hostname,username,passwd):
     auth = (username, passwd)
     search = OpenSearch(
         hosts = [{'host': aos_endpoint, 'port': 443}],
-        ##http_auth = awsauth ,
-        http_auth = auth ,
+        http_auth = awsauth ,
+        #http_auth = auth ,
         use_ssl = True,
         verify_certs = True,
         connection_class = RequestsHttpConnection
@@ -402,8 +402,8 @@ def k_nn_ingestion_by_aos_v2(docs,index,hostname,username,passwd):
     auth = (username, passwd)
     search = OpenSearch(
         hosts = [{'host': aos_endpoint, 'port': 443}],
-        ##http_auth = awsauth ,
-        http_auth = auth ,
+        http_auth = awsauth ,
+        #http_auth = auth ,
         use_ssl = True,
         verify_certs = True,
         connection_class = RequestsHttpConnection

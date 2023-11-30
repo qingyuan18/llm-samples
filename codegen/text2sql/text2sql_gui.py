@@ -28,7 +28,7 @@ def gen_sql(user_input:str):
             sample_rows_in_table_info=0,
             include_tables=st.session_state['table_name'])
 
-    db_chain = CustomerizedSQLDatabaseChain.from_llm(sm_sql_llm, db, verbose=True, return_sql=True,return_intermediate_steps=False)
+    db_chain = CustomerizedSQLDatabaseChain.from_llm(bedrock_llm, db, verbose=True, return_sql=True,return_intermediate_steps=False)
     response=db_chain.run(user_input)
     return response
 
