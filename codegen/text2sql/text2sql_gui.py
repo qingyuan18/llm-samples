@@ -1,4 +1,4 @@
-## 20231024 上线版本  #####
+## text2sql gui 20231024 上线版本  #####
 
 import streamlit as st
 from func import *
